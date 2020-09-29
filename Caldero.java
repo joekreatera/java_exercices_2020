@@ -14,8 +14,24 @@ public class Caldero{
         */
 
         public static void main(String args[]){
-            double r = Math.random(); /*entre  0 y 1*/ 
-            System.out.println("R " + r);
+            double r = Math.random()*255; /*entre  0 y 1*/ 
+            double g = Math.random()*255;
+            double d = Math.random()*255;
+            
+            System.out.println("Sustancia r :" + r );
+            System.out.println("Sustancia g :" + g);
+            System.out.println("Sustancia d :" + d);
+
+            double t = r + g+ d;
+            r = r/t*100;
+            g = g/t*100;
+            d = d/t*100;
+
+            System.out.println("Total :" + t );
+            
+            System.out.println("% Sustancia r :" + r );
+            System.out.println("% Sustancia g :" + g);
+            System.out.println("% Sustancia d :" + d);
         }
     
 }
